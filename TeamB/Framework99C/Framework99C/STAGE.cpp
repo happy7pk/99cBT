@@ -21,7 +21,7 @@ void STAGE::set_monlist(list<CGameObject*>* rhs)
 int STAGE::Update()
 {
 	if (m_Tick < m_PlusTick)
-		return;
+		return 0;
 	m_PlusTick = m_Tick;
 	//모든 틱변화는 Plustick으로 관리
 

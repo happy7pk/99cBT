@@ -15,6 +15,7 @@ struct VECTOR {
 	double Length;
 
 public:
+	VECTOR(){}
 	VECTOR(THETA th, double len) //阿档肺 积己规过
 	:Angle(th/180*PI),Length(len){}
 };
