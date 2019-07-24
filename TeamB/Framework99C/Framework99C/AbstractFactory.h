@@ -29,9 +29,9 @@ public:
 		return pInstance;
 	}
 
-	static CMM* CreateMM(CGameObject* pMonster, MONSTER_MOVING_DIRECT _direct)
+	static CMMP* CreateMM(CGameObject* pMonster, MONSTER_MOVING_DIRECT _direct)
 	{
-		CMM* pInstance = new T(pMonster, _direct);
+		CMMP* pInstance = new T(pMonster, _direct);
 		return pInstance;
 	}
 

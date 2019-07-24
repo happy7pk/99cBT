@@ -126,12 +126,6 @@
     <ClInclude Include="MM.h">
       <Filter>03.Pattern\01.Monster\01.Move</Filter>
     </ClInclude>
-    <ClInclude Include="MM_Buterfly.h">
-      <Filter>03.Pattern\01.Monster\01.Move</Filter>
-    </ClInclude>
-    <ClInclude Include="MM_Transverse.h">
-      <Filter>03.Pattern\01.Monster\01.Move</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework99C.cpp">
@@ -169,12 +163,6 @@
     </ClCompile>
     <ClCompile Include="BulletManeger.cpp">
       <Filter>97.Managers\03.BulletManeger</Filter>
-    </ClCompile>
-    <ClCompile Include="MM_Buterfly.cpp">
-      <Filter>03.Pattern\01.Monster\01.Move</Filter>
-    </ClCompile>
-    <ClCompile Include="MM_Transverse.cpp">
-      <Filter>03.Pattern\01.Monster\01.Move</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

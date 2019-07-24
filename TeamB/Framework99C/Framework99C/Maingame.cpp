@@ -22,8 +22,8 @@ void CMaingame::Initialize()
 
 
 	//TEST
-	m_ObjLst[MONSTER].push_back(new CMonster(MT01, MMP01, NORMAL));
-	m_ObjLst[MONSTER].front()->Initialize();
+	
+	
 	
 }
 

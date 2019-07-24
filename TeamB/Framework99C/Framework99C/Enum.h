@@ -16,7 +16,7 @@ enum MON_STATE{MS01};		 //타격당할때, 평소상태, 폭발상태       + 등등
 enum MON_MOV_PATTERN{MMP01 , MMP02, MMP03, MMP04}; //몬스터의 패턴
 enum MON_ATT_PATTERN{MAP01}; //공격 패턴
 enum MON_TYPE		{MT01}; //몬스터 타입(외형)
-
+enum MON_MOVE_TYPE{NOMOVE,MMT01,MMT02,MMT03,MMT04};
 //공용
 enum BULLET_TYPE { BT01 };     //총알 종류,  기본,Level1,2,3 , 필살기, 몬스터총알    + 등등
 enum BULLET_PATTERN {P01,P02,P03,P04,P05};

@@ -155,8 +155,6 @@
     <ClInclude Include="Maingame.h" />
     <ClInclude Include="MAP1.h" />
     <ClInclude Include="MM.h" />
-    <ClInclude Include="MM_Buterfly.h" />
-    <ClInclude Include="MM_Transverse.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="PatternFactory.h" />
     <ClInclude Include="Player.h" />
@@ -175,8 +173,6 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Maingame.cpp" />
     <ClCompile Include="MAP1.cpp" />
-    <ClCompile Include="MM_Buterfly.cpp" />
-    <ClCompile Include="MM_Transverse.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="PatternFactory.cpp" />
     <ClCompile Include="Player.cpp" />

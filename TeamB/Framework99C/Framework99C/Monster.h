@@ -1,14 +1,14 @@
 #pragma once
 #include "GameObject.h"
 
-class CMM;
+class CMMP;
 
 class CMonster :
 	public CGameObject
 {
 public:
 	CMonster();
-	CMonster(MON_TYPE,MON_MOV_PATTERN, MONSTER_MOVING_DIRECT);
+	CMonster(MON_TYPE mt, vector<CMMP> mmpv, MON_ATT_PATTERN map);
 	virtual ~CMonster();
 
 public:
@@ -35,14 +35,15 @@ public: //총알 생성 함수들
 	bool DeathCheck();
 
 private:
-	void CreateMovePattern();
 
 private:
 	MON_STATE				Mon_State;
 	MON_TYPE				Mon_Type;
-	MON_MOV_PATTERN			Mon_Mov_Pattern;
+	vector<CMMP>			Mon_Mov_Pattern;
+	MON_ATT_PATTERN			Mon_Atk_Pattern;
 	MONSTER_MOVING_DIRECT	Mon_Mov_Direct;
-	CMM*					m_Move;
+	int						m_ArrIndex;
+	
 };
 
 //몬스터의 해제시점은 STAGE에서 관리

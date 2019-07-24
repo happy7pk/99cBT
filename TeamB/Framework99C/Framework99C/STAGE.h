@@ -1,5 +1,6 @@
 #pragma once
 
+class CMMP;
 class CGameObject;
 class STAGE
 {
@@ -16,5 +17,9 @@ private:
 	int m_Tick;
 	int m_PlusTick;
 	list<CGameObject*>* Monster_list;
+
+	vector<CMMP> PA01[3] = { CMMP(VECTOR(120,5),300),CMMP(VECTOR(90,4),200),CMMP(VECTOR(-90,10),900) };
+
+
 };
 

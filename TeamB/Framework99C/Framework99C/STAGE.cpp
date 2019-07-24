@@ -32,7 +32,7 @@ int STAGE::Update()
 
 		for (int i = 0; i < 10; ++i)
 		{
-			CreateMonster(MT01, MMP01, NORMAL, -400 + i * 10, 1000 + i * 10);
+			CreateMonster(MT01, MMP02, NORMAL, -1800 + i * 10, 400);
 		}
 		
 
@@ -40,26 +40,17 @@ int STAGE::Update()
 	}
 	else if (m_Tick == 150)
 	{
-		for (int i = 0; i < 10; ++i)
-		{
-			CreateMonster(MT01, MMP01, NORMAL, -400 + i * 10, 1000 + i * 10);
-		}
+
 	}
 
-	if (m_Tick == 100)
-	{
-		dynamic_cast<CMonster*>(Monster_list->back())->CreateBullet_N(18);
-		++m_Tick;
-	}
-
-
+	
 
 	return 0;
 }
 
 void STAGE::CreateMonster(MON_TYPE mt, MON_MOV_PATTERN mmp, MONSTER_MOVING_DIRECT dr, double x, double y)
 {
-	Monster_list->push_back(new CMonster(mt,mmp,dr));
+	Monster_list->push_back(new CMonster(mt, PA01,dr));
 	Monster_list->back()->SetPos(x, y);
 	dynamic_cast<CMonster*>(Monster_list->back())->CreateBullet_N(18);
 }

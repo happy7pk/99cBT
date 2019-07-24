@@ -6,16 +6,17 @@
 #include "Bullet.h"
 #include "BulletManeger.h"
 
-#include "MM_Buterfly.h"
-#include "MM_Transverse.h"
+#include "MM.h"
+
 
 CMonster::CMonster()
 {
 }
 
-CMonster::CMonster(MON_TYPE mt, MON_MOV_PATTERN mmp, MONSTER_MOVING_DIRECT dr)
-	: Mon_Type(mt),Mon_Mov_Pattern(mmp), Mon_Mov_Direct(dr)
+CMonster::CMonster(MON_TYPE mt, CMMP mmpv[], MON_ATT_PATTERN map)
+	: Mon_Type(mt), Mon_Atk_Pattern(map), m_ArrIndex(0)
 {
+
 	Initialize();
 }
 
@@ -31,12 +32,12 @@ void CMonster::Initialize()
 	//시작 좌표, 크기 설정
 	m_tInfo.fCX = 10.f;
 	m_tInfo.fCY = 10.f;
-	m_fSpeed = 5.f;
+	m_fSpeed = 1.0f;
 	m_AttSpeed = 10;
 
-	CreateMovePattern();
 
 }
+
 
 int CMonster::Update()
 {
@@ -44,8 +45,17 @@ int CMonster::Update()
 	if (GetExist()==0)
 		return DEAD_OBJ;
 	
+	if (Mon_Mov_Pattern.size() > m_ArrIndex)
+	{
+		this->operator+=(Mon_Mov_Pattern[m_ArrIndex].Moving());
+		Mon_Mov_Pattern[m_ArrIndex].Update();
 
-	m_Move->Moving();
+		if (Mon_Mov_Pattern[m_ArrIndex].IsEnd())
+		{
+			++m_ArrIndex;
+		}
+	}
+	
 
 	//-----------------------
 	//코드를 입력하세요.
@@ -98,25 +108,11 @@ bool CMonster::DeathCheck()
 	return FALSE;
 }
 
-void CMonster::CreateMovePattern()
-{
-	switch (Mon_Mov_Pattern)
-	{
-	case MMP01:
-		m_Move = CAbstractFactory<CMM_Buterfly>::CreateMM(this, Mon_Mov_Direct);
-		break;
-	case MMP02:
-		m_Move = CAbstractFactory<CMM_Buterfly>::CreateMM(this, Mon_Mov_Direct);
-		break;
-	default:
-		break;
-	}
-}
 
 
 void CMonster::Release()
 {
-	SafeDelete(m_Move);
+	
 }
 
 
