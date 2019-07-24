@@ -158,8 +158,12 @@ void CMonster::CreateBullet(BULLET_PATTERN pattern)
 
 void CMonster::CreateBullet(int angle)
 {
-	CreateBullet
-	(angle / 180 * PI);
+	THETA temp;
+	temp = angle;
+	temp /= 180;
+	temp *= PI;
+
+	CreateBullet(temp);
 }
 
 void CMonster::CreateBullet_N(int N)

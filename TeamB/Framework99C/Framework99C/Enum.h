@@ -18,7 +18,7 @@ enum MON_ATT_PATTERN{MAP01}; //공격 패턴
 enum MON_TYPE		{MT01}; //몬스터 타입(외형)
 enum MON_MOVE_TYPE{NOMOVE,MMT01,MMT02,MMT03,MMT04};
 //공용
-enum BULLET_TYPE { BT01 };     //총알 종류,  기본,Level1,2,3 , 필살기, 몬스터총알    + 등등
+enum BULLET_TYPE { BT01,BT02 };     //총알 종류,  기본,Level1,2,3 , 필살기, 몬스터총알    + 등등
 enum BULLET_PATTERN {P01,P02,P03,P04,P05};
 //현우
 enum MAIN_STATE  {MAIN,PLAY,PAUSE,CLEAR,GAMEOVER};	  //메인,게임진행중,게임오버, 클리어 , + 등등 

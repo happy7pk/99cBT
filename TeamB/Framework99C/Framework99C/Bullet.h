@@ -4,8 +4,9 @@ class CBullet :
 	public CGameObject
 {
 public:
-	CBullet(double x, double y,VECTOR vec, BULLET_TYPE bt=BT01);
-	CBullet(double x, double y,THETA, double, BULLET_TYPE bt=BT01);
+	CBullet(double x, double y, VECTOR vec, BULLET_TYPE bt = BT01);
+	CBullet(double x, double y, THETA th, double, BULLET_TYPE bt = BT01);
+	CBullet(double x, double y, VECTOR vec, THETA angle, BULLET_TYPE bt = BT01);
 	virtual ~CBullet();
 
 public:
@@ -24,10 +25,11 @@ private:
 	void IsMoving();
 	void IsOutRange();
 
-	
+
 
 private:
 	VECTOR Vec;
 	BULLET_TYPE m_bullet_type;
+	THETA angle;
 };
 

@@ -82,6 +82,10 @@ void CPlayer::KeyInput()
 	{
 		CreateBullet_N(5);
 	}
+	if (GetAsyncKeyState(0x43) & 0x8000)
+	{
+		CreateBullet(P04);
+	}
 }
 
 void CPlayer::IsOutRenge()
@@ -128,7 +132,12 @@ void CPlayer::CreateBullet(BULLET_PATTERN pattern)
 
 void CPlayer::CreateBullet(int angle)
 {
-	CreateBullet(angle / 180 * PI);
+	THETA temp;
+	temp = angle;
+	temp /= 180;
+	temp *= PI;
+
+	CreateBullet(temp);
 }
 
 void CPlayer::CreateBullet_N(int N)
