@@ -29,8 +29,7 @@ void CMaingame::Initialize()
 
 void CMaingame::Update()
 {
-
-
+	
 	m_Curtick = clock();
 	if (m_Curtick - m_Oldtick < 1000)
 	{
@@ -75,6 +74,8 @@ void CMaingame::Update()
 
 void CMaingame::Render()
 {
+	
+
 	
 	MAP1::ROADMAP()->Render(m_hDC);
 

@@ -1,9 +1,11 @@
 #include "stdafx.h"
 #include "MAP1.h"
+#include "Resource.h"
 
 
 MAP1::MAP1()
 {
+
 }
 
 

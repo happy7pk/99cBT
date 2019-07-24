@@ -27,5 +27,7 @@ public:
 	clock_t				m_Oldtick;
 	clock_t				m_Curtick;
 	int					m_tick;
+
+
 };
 

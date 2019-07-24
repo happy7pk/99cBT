@@ -12,5 +12,9 @@ public:
 private:
 	MAP1();
 	int m_Tick;
+
+
+
+	
 };
 

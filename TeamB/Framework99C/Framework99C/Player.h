@@ -1,6 +1,7 @@
 #pragma once
 #include "GameObject.h"
 #include "Bullet.h"
+#include "time.h"
 class PatternFactory;
 class CPlayer :
 	public CGameObject
@@ -33,5 +34,8 @@ private: //총알 생성 함수들
 private:	
 	PLAYER_LEVEL player_level;
 	PLAYER_STATE player_state;
+	clock_t oldtime=0;
+	clock_t curtime=0;
+
 };
 
