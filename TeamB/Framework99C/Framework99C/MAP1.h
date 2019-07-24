@@ -5,12 +5,14 @@ public:
 
 	static MAP1* ROADMAP();
 	int Update();
-	void Render(HDC hDC);
+	void Render(HDC hDC ,HDC MemDC);
 	void Set_Tick(int tick);
 	~MAP1();
 	
 private:
 	MAP1();
 	int m_Tick;
+
+	HBITMAP MyBitmap, OldBitmap;
 };
 

@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "MAP1.h"
+#include "Resource.h"
 
 
 MAP1::MAP1()
@@ -19,10 +20,18 @@ int MAP1::Update()
 	return 0;
 }
 
-void MAP1::Render(HDC hDC)
+void MAP1::Render(HDC hDC, HDC MemDC)
 {
+
+//	MemDC = CreateCompatibleDC(hDC); // 메모리 DC를 가져옴
+//	MyBitmap = LoadBitmap(hInst, MAKEINTRESOURCE(IDB_BITMAP1));
+//	OldBitmap = (HBITMAP)SelectObject(MemDC, MyBitmap);
+//	BitBlt(hDC, 0, 0, WINCX, WINCY, MemDC, 0, 0, SRCCOPY);
+//	SelectObject(MemDC, OldBitmap);
+//	//Rectangle(hDC, 0, 0, WINCX, WINCY);
+
 	
-	Rectangle(hDC, 0, 0, WINCX, WINCY);
+	
 }
 
 void MAP1::Set_Tick(int tick)

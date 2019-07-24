@@ -146,8 +146,12 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+
+
+
     switch (message)
     {	
+
 	case WM_CLOSE:
     case WM_DESTROY:	// 윈도우가 파괴될 때 발생하는 메시지		
         PostQuitMessage(0);

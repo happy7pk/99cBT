@@ -23,6 +23,7 @@ public:
 
 public:
 	HDC					m_hDC;	
+	HDC					m_MemDC;
 	list<CGameObject*>	m_ObjLst[OBJECT_END];
 	clock_t				m_Oldtick;
 	clock_t				m_Curtick;

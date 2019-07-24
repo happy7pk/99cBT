@@ -30,7 +30,7 @@ void CPlayer::Initialize()
 int CPlayer::Update()
 {
 	KeyInput();
-	//IsOutRenge();
+	IsOutRenge();
 
 
 	
@@ -62,21 +62,45 @@ void CPlayer::Release()
 
 void CPlayer::KeyInput()
 {	
+	// 플레이어 무빙
 	if (GetAsyncKeyState(VK_UP) & 0x8000)
 	{
-		CreateBullet_N(36);
+		m_tInfo.fY -= m_fSpeed;
+		//CreateBullet_N(36);
 	}
 	if (GetAsyncKeyState(VK_DOWN) & 0x8000)
 	{
-		CreateBullet(P01);
+		m_tInfo.fY += m_fSpeed;
+		//CreateBullet_N(36);
 	}
 	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-	{ 
-		CreateBullet(70);
+	{
+		m_tInfo.fX -= m_fSpeed;
 	}
 	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
 	{
-		CreateBullet();
+		m_tInfo.fX += m_fSpeed;
+	}
+
+	// 총알발사
+	if (GetAsyncKeyState(VK_CONTROL) & 0x8000)
+	{
+		curtime = clock();
+		if (curtime - oldtime > 50)
+		{
+			CreateBullet_N(4);
+			oldtime = curtime;
+		}
+	}
+
+	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+	{
+		curtime = clock();
+		if (curtime - oldtime > 50)
+		{
+			CreateBullet();
+			oldtime = curtime;
+		}
 	}
 	if (GetAsyncKeyState(0x41) & 0x8000)
 	{
@@ -87,6 +111,23 @@ void CPlayer::KeyInput()
 void CPlayer::IsOutRenge()
 {
 	//플레이어의 경계검사
+	UpdateRect();
+	if (m_tInfo.fX <= 10)
+	{
+		m_tInfo.fX += 5.f;
+	}
+	if (m_tInfo.fX >= WINCX - 10)
+	{
+		m_tInfo.fX -= 5.f;
+	}
+	if (m_tInfo.fY <= 10)
+	{
+		m_tInfo.fY += 5.f;
+	}
+	if (m_tInfo.fY >= WINCY - 10)
+	{
+		m_tInfo.fY -= 5.f;
+	}
 }
 
 void CPlayer::CreateBullet()

@@ -61,6 +61,9 @@
     <Filter Include="97.Managers\05.Center">
       <UniqueIdentifier>{10bfc9cb-3b17-4c76-8d31-5ef34d535c40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스파일">
+      <UniqueIdentifier>{f655e5bf-3904-4c2b-9666-3ba5320741f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework99C.h">
@@ -199,6 +202,9 @@
     <Image Include="small.ico">
       <Filter>99.Default</Filter>
     </Image>
+    <Image Include="Texture\space.bmp" />
+    <Image Include="bitmap1.bmp" />
+    <Image Include="bitmap2.bmp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Framework99C.rc">

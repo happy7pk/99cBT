@@ -196,8 +196,11 @@
     <ResourceCompile Include="Framework99C.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="bitmap1.bmp" />
+    <Image Include="bitmap2.bmp" />
     <Image Include="Framework99C.ico" />
     <Image Include="small.ico" />
+    <Image Include="Texture\space.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

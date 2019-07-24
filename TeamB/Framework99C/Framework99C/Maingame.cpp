@@ -76,7 +76,7 @@ void CMaingame::Update()
 void CMaingame::Render()
 {
 	
-	MAP1::ROADMAP()->Render(m_hDC);
+	MAP1::ROADMAP()->Render(m_hDC, m_MemDC);
 
 
 	for (auto i : *(BulletManeger::ROAD()->Get_mlist()))
