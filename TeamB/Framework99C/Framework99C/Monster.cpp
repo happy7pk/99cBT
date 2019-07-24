@@ -13,8 +13,8 @@ CMonster::CMonster()
 {
 }
 
-CMonster::CMonster(MON_TYPE mt, CMMP mmpv[], MON_ATT_PATTERN map)
-	: Mon_Type(mt), Mon_Atk_Pattern(map), m_ArrIndex(0)
+CMonster::CMonster(MON_TYPE mt, vector<CMMP> mmpv, MON_ATT_PATTERN map)
+	: Mon_Type(mt), Mon_Mov_Pattern(mmpv),Mon_Atk_Pattern(map), m_iMovArrIndex(0)
 {
 
 	Initialize();
@@ -45,14 +45,15 @@ int CMonster::Update()
 	if (GetExist()==0)
 		return DEAD_OBJ;
 	
-	if (Mon_Mov_Pattern.size() > m_ArrIndex)
+	if (Mon_Mov_Pattern.size() > m_iMovArrIndex)
 	{
-		this->operator+=(Mon_Mov_Pattern[m_ArrIndex].Moving());
-		Mon_Mov_Pattern[m_ArrIndex].Update();
+		this->operator+=(Mon_Mov_Pattern[m_iMovArrIndex].Moving());
+		Mon_Mov_Pattern[m_iMovArrIndex].Update();
 
-		if (Mon_Mov_Pattern[m_ArrIndex].IsEnd())
+		if (Mon_Mov_Pattern[m_iMovArrIndex].IsEnd())
 		{
-			++m_ArrIndex;
+			CreateBullet(90);
+			++m_iMovArrIndex;
 		}
 	}
 	

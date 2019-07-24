@@ -1,21 +1,3 @@
-﻿  stdafx.cpp
-  STAGE.cpp
-c:\users\administrator\documents\github\99cbt\teamb\framework99c\framework99c\stage.cpp(53): error C2664: 'CMonster::CMonster(const CMonster &)': 인수 2을(를) 'CMMP [3]'에서 'std::vector<CMMP,std::allocator<_Ty>>'(으)로 변환할 수 없습니다.
-          with
-          [
-              _Ty=CMMP
-          ]
-  c:\users\administrator\documents\github\99cbt\teamb\framework99c\framework99c\stage.cpp(53): note: 소스 형식을 가져올 수 있는 생성자가 없거나 생성자 오버로드 확인이 모호합니다.
-  Player.cpp
-  PatternFactory.cpp
-  Monster.cpp
-c:\users\administrator\documents\github\99cbt\teamb\framework99c\framework99c\monster.cpp(39): error C2805: 이항 'operator +='에 매개 변수가 너무 적습니다.
-c:\users\administrator\documents\github\99cbt\teamb\framework99c\framework99c\monster.cpp(49): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
-  Maingame.cpp
-  MAP1.cpp
-  GameObject.cpp
-  Framework99C.cpp
-  CollsionMgr.cpp
-  BulletManeger.cpp
-  Bullet.cpp
-  코드를 생성하고 있습니다...
+﻿  STAGE.cpp
+  Framework99C.vcxproj -> C:\Users\Administrator\Documents\GitHub\99cBT\TeamB\Framework99C\Debug\Framework99C.exe
+  Framework99C.vcxproj -> C:\Users\Administrator\Documents\GitHub\99cBT\TeamB\Framework99C\Debug\Framework99C.pdb (Full PDB)

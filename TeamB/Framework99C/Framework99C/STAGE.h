@@ -7,10 +7,16 @@ class STAGE
 public:
 	static STAGE* ROADSTAGE1();
 	void set_monlist(list<CGameObject*>* rhs);
-	int Update();
-	void CreateMonster(MON_TYPE, MON_MOV_PATTERN, MONSTER_MOVING_DIRECT, double x, double y);
 	void Set_Tick(int tick);
+	void CreateMonster(MON_TYPE mt, vector<CMMP> mmpv, MON_ATT_PATTERN mat, double x, double y);
+
+public:
 	~STAGE();
+
+public:
+	int Update();
+	void Initialize();
+
 
 private:
 	STAGE();
@@ -18,7 +24,7 @@ private:
 	int m_PlusTick;
 	list<CGameObject*>* Monster_list;
 
-	vector<CMMP> PA01[3] = { CMMP(VECTOR(120,5),300),CMMP(VECTOR(90,4),200),CMMP(VECTOR(-90,10),900) };
+	vector<vector<CMMP>> m_PatternVector;
 
 
 };

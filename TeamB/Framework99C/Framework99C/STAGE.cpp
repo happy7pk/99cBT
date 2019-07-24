@@ -4,6 +4,7 @@
 #include "Bullet.h"
 STAGE::STAGE()
 {
+	Initialize();
 }
 
 
@@ -32,7 +33,16 @@ int STAGE::Update()
 
 		for (int i = 0; i < 10; ++i)
 		{
-			CreateMonster(MT01, MMP02, NORMAL, -1800 + i * 10, 400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 220, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 240, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 260, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 280, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 300, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 320, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 340, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 360, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 380, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 400, -400);
 		}
 		
 
@@ -40,7 +50,20 @@ int STAGE::Update()
 	}
 	else if (m_Tick == 150)
 	{
-
+		for (int i = 0; i < 10; ++i)
+		{
+			
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 220, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 240, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 260, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 280, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 300, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 320, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 340, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 360, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 380, -400);
+			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 400, -400);
+		}
 	}
 
 	
@@ -48,9 +71,16 @@ int STAGE::Update()
 	return 0;
 }
 
-void STAGE::CreateMonster(MON_TYPE mt, MON_MOV_PATTERN mmp, MONSTER_MOVING_DIRECT dr, double x, double y)
+void STAGE::Initialize()
 {
-	Monster_list->push_back(new CMonster(mt, PA01,dr));
+	m_PatternVector.reserve(50);
+
+	m_PatternVector.push_back(vector<CMMP>{ CMMP(VECTOR(90,3),600),CMMP(VECTOR(0,0),500,NOMOVE, 500), CMMP(VECTOR(0, 0), 500, NOMOVE, 1000), CMMP(VECTOR(0, 0), 500, NOMOVE, 1500), CMMP(VECTOR(0, 0), 500, NOMOVE, 2000), CMMP(VECTOR(0, 0), 500, NOMOVE, 2500), CMMP(VECTOR(0, 0), 500, NOMOVE,3000), CMMP(VECTOR(180, 2), 800) });
+}
+
+void STAGE::CreateMonster(MON_TYPE mt, vector<CMMP> mmpv, MON_ATT_PATTERN mat, double x, double y)
+{
+	Monster_list->push_back(new CMonster(mt, mmpv, mat));
 	Monster_list->back()->SetPos(x, y);
 	dynamic_cast<CMonster*>(Monster_list->back())->CreateBullet_N(18);
 }

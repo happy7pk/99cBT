@@ -39,10 +39,9 @@ private:
 private:
 	MON_STATE				Mon_State;
 	MON_TYPE				Mon_Type;
-	vector<CMMP>			Mon_Mov_Pattern;
 	MON_ATT_PATTERN			Mon_Atk_Pattern;
-	MONSTER_MOVING_DIRECT	Mon_Mov_Direct;
-	int						m_ArrIndex;
+	vector<CMMP>			Mon_Mov_Pattern;
+	int						m_iMovArrIndex;
 	
 };
 
