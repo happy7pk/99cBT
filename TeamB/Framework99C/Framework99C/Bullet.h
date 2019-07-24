@@ -29,5 +29,6 @@ private:
 private:
 	VECTOR Vec;
 	BULLET_TYPE m_bullet_type;
+	THETA angle;
 };
 
