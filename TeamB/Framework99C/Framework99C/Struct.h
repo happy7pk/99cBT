@@ -13,6 +13,10 @@ typedef struct tagInfo
 struct VECTOR {
 	THETA Angle;
 	double Length;
+
+public:
+	VECTOR(THETA th, double len) //阿档肺 积己规过
+	:Angle(th/180*PI),Length(len){}
 };
 
 #define __STRUCT_H__

@@ -20,6 +20,10 @@ void STAGE::set_monlist(list<CGameObject*>* rhs)
 
 int STAGE::Update()
 {
+	if (m_Tick < m_PlusTick)
+		return;
+	//모든 틱변화는 Plustick으로 관리
+
 	//현재 틱의 범위에 따라 몬스터 생성
 	//CreateMonster 사용 방법
 	//1.몬스터타입, 2.이동타입, 3.공격 타입, x좌표, y좌표

@@ -55,6 +55,9 @@
     <Filter Include="03.Pattern\01.Monster\01.Move">
       <UniqueIdentifier>{95b741b0-1040-4427-bb24-e91bed2031a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="97.Managers\04.UIManeger">
+      <UniqueIdentifier>{0ec55f10-9f85-4553-8825-9f1c0aaa8d84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework99C.h">

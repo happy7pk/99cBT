@@ -14,6 +14,7 @@ public:
 private:
 	STAGE();
 	int m_Tick;
+	int m_PlusTick;
 	list<CGameObject*>* Monster_list;
 };
 
