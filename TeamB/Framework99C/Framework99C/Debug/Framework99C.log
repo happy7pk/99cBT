@@ -1,3 +1,20 @@
-﻿  STAGE.cpp
+﻿  stdafx.cpp
+c:\users\administrator\documents\github\99cbt\teamb\framework99c\framework99c\mm.h(53): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+  UIManeger.cpp
+  STAGE.cpp
+  Player.cpp
+  PatternFactory.cpp
+  Monster.cpp
+c:\users\administrator\documents\github\99cbt\teamb\framework99c\framework99c\monster.cpp(48): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+  Maingame.cpp
+  MAP1.cpp
+  GameObject.cpp
+  Framework99C.cpp
+  CollsionMgr.cpp
+  Center.cpp
+  BulletManeger.cpp
+  Bullet.cpp
+  코드를 생성하고 있습니다...
+c:\users\administrator\documents\github\99cbt\teamb\framework99c\framework99c\mm.h(39): warning C4172: 지역 변수 또는 임시의 주소를 반환하고 있습니다.
   Framework99C.vcxproj -> C:\Users\Administrator\Documents\GitHub\99cBT\TeamB\Framework99C\Debug\Framework99C.exe
   Framework99C.vcxproj -> C:\Users\Administrator\Documents\GitHub\99cBT\TeamB\Framework99C\Debug\Framework99C.pdb (Full PDB)

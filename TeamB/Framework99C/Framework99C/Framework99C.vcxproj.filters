@@ -58,6 +58,9 @@
     <Filter Include="97.Managers\04.UIManeger">
       <UniqueIdentifier>{0ec55f10-9f85-4553-8825-9f1c0aaa8d84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="97.Managers\05.Center">
+      <UniqueIdentifier>{77bb00d2-46bf-4353-bb97-a78bd967222c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework99C.h">
@@ -126,6 +129,12 @@
     <ClInclude Include="MM.h">
       <Filter>03.Pattern\01.Monster\01.Move</Filter>
     </ClInclude>
+    <ClInclude Include="UIManeger.h">
+      <Filter>97.Managers\04.UIManeger</Filter>
+    </ClInclude>
+    <ClInclude Include="Center.h">
+      <Filter>97.Managers\05.Center</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework99C.cpp">
@@ -163,6 +172,12 @@
     </ClCompile>
     <ClCompile Include="BulletManeger.cpp">
       <Filter>97.Managers\03.BulletManeger</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManeger.cpp">
+      <Filter>97.Managers\04.UIManeger</Filter>
+    </ClCompile>
+    <ClCompile Include="Center.cpp">
+      <Filter>97.Managers\05.Center</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
