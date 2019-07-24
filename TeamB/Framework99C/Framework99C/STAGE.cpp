@@ -22,6 +22,7 @@ int STAGE::Update()
 {
 	if (m_Tick < m_PlusTick)
 		return;
+	m_PlusTick = m_Tick;
 	//모든 틱변화는 Plustick으로 관리
 
 	//현재 틱의 범위에 따라 몬스터 생성
