@@ -145,7 +145,6 @@
     <ClInclude Include="AbstractFactory.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="BulletManeger.h" />
-    <ClInclude Include="Center.h" />
     <ClInclude Include="CollsionMgr.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="Enum.h" />
@@ -156,8 +155,6 @@
     <ClInclude Include="Maingame.h" />
     <ClInclude Include="MAP1.h" />
     <ClInclude Include="MM.h" />
-    <ClInclude Include="MM_Buterfly.h" />
-    <ClInclude Include="MM_Transverse.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="PatternFactory.h" />
     <ClInclude Include="Player.h" />
@@ -167,19 +164,15 @@
     <ClInclude Include="Struct.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Typedef.h" />
-    <ClInclude Include="UIManeger.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="BulletManeger.cpp" />
-    <ClCompile Include="Center.cpp" />
     <ClCompile Include="CollsionMgr.cpp" />
     <ClCompile Include="Framework99C.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Maingame.cpp" />
     <ClCompile Include="MAP1.cpp" />
-    <ClCompile Include="MM_Buterfly.cpp" />
-    <ClCompile Include="MM_Transverse.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="PatternFactory.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -190,7 +183,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="UIManeger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Framework99C.rc" />

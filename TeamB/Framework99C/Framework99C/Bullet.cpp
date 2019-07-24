@@ -20,24 +20,14 @@ CBullet::CBullet(double x, double y, THETA th, double length, BULLET_TYPE bt)
 		Exist = 1;
 		m_tInfo.fX = x;
 		m_tInfo.fY = y;
-		Vec.Angle = th/180*PI;
+		Vec.Angle = th;
 		Vec.Length = length;
 		m_tInfo.fCX = 20.f;
 		m_tInfo.fCY = 20.f;
 		m_fSpeed = 5.f;
 		Initialize();
 		break;
-	case BT02:
-		Exist = 1;
-		m_tInfo.fX = x;
-		m_tInfo.fY = y;
-		Vec.Angle = th;
-		Vec.Length = length;
-		m_tInfo.fCX = 10.f;
-		m_tInfo.fCY = 10.f;
-		m_fSpeed = 10.f;
-		Initialize();
-		break;
+
 	
 	}
 	
