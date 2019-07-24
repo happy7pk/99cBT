@@ -11,7 +11,7 @@
 #define FPS30 33
 #define FPS60 17
 #define FPS100 10
-#define FPSMY 50
+#define FPSMY 10
 
 
 #define PI 3.141592
