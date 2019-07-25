@@ -40,6 +40,14 @@ void CMaingame::Update()
 	SendTick();
 
 	MAP1::ROADMAP()	   ->Update();
+
+	//面倒眉农
+	BulletManeger::ROAD()->OutRengelst();
+	CCollsionMgr::CollisionRect(m_ObjLst[PLAYER], m_ObjLst[MONSTER]);
+	CCollsionMgr::CollisionRect(*(BulletManeger::ROAD()->Get_mlist()), m_ObjLst[PLAYER]);
+	CCollsionMgr::CollisionRect(*(BulletManeger::ROAD()->Get_plist()), m_ObjLst[MONSTER]);
+
+
 	STAGE::ROADSTAGE1()->Update();
 	for (int i = 0; i < OBJECT_END; ++i)
 	{
@@ -53,11 +61,6 @@ void CMaingame::Update()
 		i->Update();
 
 
-	//面倒眉农
-	BulletManeger::ROAD()->OutRengelst();
-	CCollsionMgr::CollisionRect(m_ObjLst[PLAYER], m_ObjLst[MONSTER]);
-	CCollsionMgr::CollisionRect(*(BulletManeger::ROAD()->Get_mlist()) , m_ObjLst[PLAYER]);
-	CCollsionMgr::CollisionRect(*(BulletManeger::ROAD()->Get_plist()), m_ObjLst[MONSTER]);
 	
 
 	list<CGameObject*>::iterator iter = m_ObjLst[MONSTER].begin();
