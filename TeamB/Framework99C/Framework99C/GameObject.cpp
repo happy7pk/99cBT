@@ -13,7 +13,6 @@ CGameObject::~CGameObject()
 
 const INFO & CGameObject::GetInfo() const
 {
-	// TODO: 여기에 반환 구문을 삽입합니다.
 	return m_tInfo;
 }
 
@@ -70,6 +69,22 @@ CGameObject & CGameObject::operator-=(VECTOR & RHS)
 	PlusX(-x);
 	PlusY(-y);
 	return *this;
+}
+
+bool CGameObject::Set_Col()
+{
+	m_Col = 1;
+	return TRUE;
+}
+
+bool CGameObject::Get_Col()
+{
+	if (m_Col == 1) {
+		m_Col = 0;
+		return 1;
+	}
+	else
+		return 0;
 }
 
 void CGameObject::UpdateRect()

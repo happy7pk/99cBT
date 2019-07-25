@@ -27,6 +27,10 @@ void CCollsionMgr::CollisionRect(const OBJLIST& dstLst, const OBJLIST& srcLst)
 				pDest->Dead();
 				pSource->Dead();
 			}
+			else {
+				pDest->Get_Col();
+				pSource->Get_Col();
+			}
 		}
 	}
 }
