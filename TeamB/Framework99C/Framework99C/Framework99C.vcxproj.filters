@@ -61,6 +61,9 @@
     <Filter Include="97.Managers\05.Center">
       <UniqueIdentifier>{77bb00d2-46bf-4353-bb97-a78bd967222c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="97.Managers\06.ImageMenager">
+      <UniqueIdentifier>{a90fc281-4889-41b7-9978-94b0a786f44c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework99C.h">

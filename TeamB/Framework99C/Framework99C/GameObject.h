@@ -28,6 +28,12 @@ public:
 	CGameObject& operator-=(VECTOR &RHS);
 
 
+public:
+	bool Set_Col();
+	bool Get_COl();
+	int Get_HP();
+
+
 protected:
 	virtual void Release() = 0;
  
@@ -40,6 +46,7 @@ protected:
 	double	m_fSpeed;
 	bool	Exist=1;
 	double   m_AttSpeed;
+	bool m_Col=0;
 
 };
 

@@ -8,6 +8,15 @@ typedef struct tagInfo
 	double fY = 0.f;
 	double fCX = 0.f;
 	double fCY = 0.f;
+
+	int HP;
+	int MaxHp;
+	int Exp;
+	int MaxExp;
+	int Lev;
+	int Gage;
+	int MaxGage;
+
 }INFO;
 
 struct VECTOR {
@@ -18,6 +27,7 @@ public:
 	VECTOR(){}
 	VECTOR(THETA th, double len) //阿档肺 积己规过
 	:Angle(th/180*PI),Length(len){}
+	
 };
 
 #define __STRUCT_H__

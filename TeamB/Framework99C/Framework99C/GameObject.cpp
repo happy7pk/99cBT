@@ -72,6 +72,23 @@ CGameObject & CGameObject::operator-=(VECTOR & RHS)
 	return *this;
 }
 
+bool CGameObject::Set_Col()
+{
+	m_Col = 1;
+	return TRUE;
+}
+
+bool CGameObject::Get_COl()
+{
+	if (m_Col == 1) {
+		m_Col = 0;
+		return 1;
+	}
+	else
+		return 0;
+}
+
+
 void CGameObject::UpdateRect()
 {
 	m_tRect.left = static_cast<LONG>(m_tInfo.fX - m_tInfo.fCX * 0.5f);
