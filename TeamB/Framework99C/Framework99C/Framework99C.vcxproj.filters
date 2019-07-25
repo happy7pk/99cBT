@@ -49,12 +49,6 @@
     <Filter Include="03.Pattern">
       <UniqueIdentifier>{742ec17d-3bb0-48f6-8579-0d4de9289b9c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03.Pattern\01.Monster">
-      <UniqueIdentifier>{0a5457be-e8e7-463e-aace-5db1d5f2602f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="03.Pattern\01.Monster\01.Move">
-      <UniqueIdentifier>{95b741b0-1040-4427-bb24-e91bed2031a3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="97.Managers\04.UIManeger">
       <UniqueIdentifier>{0ec55f10-9f85-4553-8825-9f1c0aaa8d84}</UniqueIdentifier>
     </Filter>
@@ -126,14 +120,20 @@
     <ClInclude Include="BulletManeger.h">
       <Filter>97.Managers\03.BulletManeger</Filter>
     </ClInclude>
-    <ClInclude Include="MM.h">
-      <Filter>03.Pattern\01.Monster\01.Move</Filter>
-    </ClInclude>
     <ClInclude Include="UIManeger.h">
       <Filter>97.Managers\04.UIManeger</Filter>
     </ClInclude>
     <ClInclude Include="Center.h">
       <Filter>97.Managers\05.Center</Filter>
+    </ClInclude>
+    <ClInclude Include="MM.h">
+      <Filter>03.Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterPatternFactory.h">
+      <Filter>03.Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="Macro.h">
+      <Filter>98.Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +178,9 @@
     </ClCompile>
     <ClCompile Include="Center.cpp">
       <Filter>97.Managers\05.Center</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterPatternFactory.cpp">
+      <Filter>03.Pattern</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

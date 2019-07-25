@@ -40,10 +40,31 @@ using namespace std;
 #include "Extern.h"
 #include "Function.h"
 #include "Struct.h"
+#include "Macro.h"
+
+
+
+
+
+
+
 
 // Manager Headers
 #include "AbstractFactory.h"
 #include "CollsionMgr.h"
+#include "MonsterPatternFactory.h"
+
+
+
+
+
+
+
+
+
+
+
+
 
 //#pragma comment(linker,"/entry:wWinMainCRTStartup /subsystem:console")
 //√‚√≥: https://alleysark.tistory.com/36 [æŸ∏ÆªÌ]

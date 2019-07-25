@@ -2,6 +2,7 @@
 #include "STAGE.h"
 #include "Monster.h"
 #include "Bullet.h"
+
 STAGE::STAGE()
 {
 	Initialize();
@@ -29,43 +30,48 @@ int STAGE::Update()
 	//현재 틱의 범위에 따라 몬스터 생성
 	//CreateMonster 사용 방법
 	//1.몬스터타입, 2.이동타입, 3.공격 타입, x좌표, y좌표
-	if (m_Tick == 10) {
+	if (10 == m_Tick) {
 
-		for (int i = 0; i < 10; ++i)
+
+		CreateMonster(MT04, MMPA(MMP01), MAP01, 300, -100);
+
+		CreateMonster(MT03, MMPA(MMP01), MAP01, 150, -500);
+		CreateMonster(MT03, MMPA(MMP01), MAP01, 230, -500);
+		CreateMonster(MT03, MMPA(MMP01), MAP01, 310, -500);
+		CreateMonster(MT03, MMPA(MMP01), MAP01, 380, -500);
+		CreateMonster(MT03, MMPA(MMP01), MAP01, 460, -500);
+
+
+		for (int i = 0; i < 3; ++i)
 		{
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 220, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 240, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 260, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 280, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 300, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 320, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 340, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 360, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 380, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 400, -400);
+			CreateMonster(MT01, MMPA(MMP01), MAP01, 150, -300 - 80 * i);
+			CreateMonster(MT01, MMPA(MMP01), MAP01, 230, -300 - 80 * i);
+			CreateMonster(MT01, MMPA(MMP01), MAP01, 310, -300 - 80 * i);
+			CreateMonster(MT01, MMPA(MMP01), MAP01, 380, -300 - 80 * i);
+			CreateMonster(MT01, MMPA(MMP01), MAP01, 460, -300 - 80 * i);
+		}
+
+		for (int i = 0; i < 3; ++i)
+		{
+			CreateMonster(MT02, MMPA(MMP01), MAP01, 150, -300 - 80 * i);
+			CreateMonster(MT02, MMPA(MMP01), MAP01, 230, -300 - 80 * i);
+			CreateMonster(MT02, MMPA(MMP01), MAP01, 310, -300 - 80 * i);
+			CreateMonster(MT02, MMPA(MMP01), MAP01, 380, -300 - 80 * i);
+			CreateMonster(MT02, MMPA(MMP01), MAP01, 460, -300 - 80 * i);
 		}
 		
 
 		++m_Tick;
 	}
-	else if (m_Tick == 150)
+	else if (400 == m_Tick)
 	{
-		for (int i = 0; i < 10; ++i)
-		{
-			
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 220, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 240, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 260, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 280, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 300, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 320, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 340, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 360, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 380, -400);
-			CreateMonster(MT01, m_PatternVector[MMP01], MAP01, 400, -400);
-		}
 	}
-
+	else if (800 == m_Tick)
+	{
+	}
+	else if (1200 == m_Tick)
+	{
+	}
 	
 
 	return 0;
@@ -73,9 +79,7 @@ int STAGE::Update()
 
 void STAGE::Initialize()
 {
-	m_PatternVector.reserve(50);
 
-	m_PatternVector.push_back(vector<CMMP>{ CMMP(VECTOR(90,3),600),CMMP(VECTOR(0,0),500,NOMOVE, 500), CMMP(VECTOR(0, 0), 500, NOMOVE, 1000), CMMP(VECTOR(0, 0), 500, NOMOVE, 1500), CMMP(VECTOR(0, 0), 500, NOMOVE, 2000), CMMP(VECTOR(0, 0), 500, NOMOVE, 2500), CMMP(VECTOR(0, 0), 500, NOMOVE,3000), CMMP(VECTOR(180, 2), 800) });
 }
 
 void STAGE::CreateMonster(MON_TYPE mt, vector<CMMP> mmpv, MON_ATT_PATTERN mat, double x, double y)
