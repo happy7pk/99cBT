@@ -35,26 +35,26 @@ void CMonster::Initialize()
 	switch (Mon_Type)
 	{
 	case MT01:
-		m_tInfo.fCX = 50.f;
-		m_tInfo.fCY = 50.f;
+		m_tInfo.fCX = MOB_SIZE_MEDIUM;
+		m_tInfo.fCY = MOB_SIZE_MEDIUM;
 		m_fSpeed = 1.0f;
 		m_AttSpeed = 10;
 		break;
 	case MT02:
-		m_tInfo.fCX = 40.f;
-		m_tInfo.fCY = 40.f;
+		m_tInfo.fCX = MOB_SIZE_MEDIUM;
+		m_tInfo.fCY = MOB_SIZE_MEDIUM;
 		m_fSpeed = 1.0f;
 		m_AttSpeed = 10;
 		break;
 	case MT03:
-		m_tInfo.fCX = 20.f;
-		m_tInfo.fCY = 20.f;
+		m_tInfo.fCX = MOB_SIZE_SMALL;
+		m_tInfo.fCY = MOB_SIZE_SMALL;
 		m_fSpeed = 1.0f;
 		m_AttSpeed = 10;
 		break;
 	case MT04:
-		m_tInfo.fCX = 160;
-		m_tInfo.fCY = 160;
+		m_tInfo.fCX = MOB_SIZE_LARGE;
+		m_tInfo.fCY = MOB_SIZE_LARGE;
 		m_fSpeed = 1.0f;
 		m_AttSpeed = 10;
 		break;

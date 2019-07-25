@@ -13,7 +13,7 @@ enum PLAYER_STATE {PS01}; //플레이어 상태 타격당할때상태, 일반     +   회피, 무�
 
 //정우
 enum MON_STATE{MS01,MS02,MS03};		 //타격당할때, 평소상태, 폭발상태       + 등등
-enum MON_MOV_PATTERN{MMP01 , MMP02, MMP03, MMP04}; //몬스터의 패턴
+enum MON_MOV_PATTERN{MMP01 , MMP02, MMP03, MMP04, MMP05, MMP06, MMP07, MMP08, MMP09, MMP10, MMP11}; //몬스터의 패턴
 enum MON_ATT_PATTERN{MAP01}; //공격 패턴
 enum MON_TYPE		{MT01,MT02,MT03,MT04}; //몬스터 타입(외형)
 enum MON_MOVE_TYPE{NOMOVE,MMT01,MMT02,MMT03,MMT04};

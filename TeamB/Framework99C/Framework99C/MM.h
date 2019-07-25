@@ -55,6 +55,9 @@ public:
 				m_Vector.Length = 77777;
 			}
 			break;
+		case MMT01:
+			
+			break;
 		default:
 			break;
 		}
