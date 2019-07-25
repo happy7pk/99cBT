@@ -1,4 +1,6 @@
 #pragma once
 
 
-#define MMPA(X) CMonsterPatternFactory::ROAD()->GetMovePatternArray((X))
+#define MMPA(X) CMonsterPatternFactory::GetMovePatternArray((X))
+
+

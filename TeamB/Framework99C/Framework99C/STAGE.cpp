@@ -33,7 +33,7 @@ int STAGE::Update()
 	if (10 == m_Tick) {
 
 
-		CreateMonster(MT04, MMPA(MMP01), MAP01, 300, -100);
+		CreateMonster(MT04, MMPA(MMP02), MAP01, 300, -100);
 
 		CreateMonster(MT03, MMPA(MMP01), MAP01, 150, -500);
 		CreateMonster(MT03, MMPA(MMP01), MAP01, 230, -500);
