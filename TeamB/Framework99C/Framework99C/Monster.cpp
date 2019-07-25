@@ -29,11 +29,39 @@ CMonster::~CMonster()
 void CMonster::Initialize()
 {
 	Exist = 1;
+
 	//시작 좌표, 크기 설정
-	m_tInfo.fCX = 10.f;
-	m_tInfo.fCY = 10.f;
-	m_fSpeed = 1.0f;
-	m_AttSpeed = 10;
+
+	switch (Mon_Type)
+	{
+	case MT01:
+		m_tInfo.fCX = 50.f;
+		m_tInfo.fCY = 50.f;
+		m_fSpeed = 1.0f;
+		m_AttSpeed = 10;
+		break;
+	case MT02:
+		m_tInfo.fCX = 40.f;
+		m_tInfo.fCY = 40.f;
+		m_fSpeed = 1.0f;
+		m_AttSpeed = 10;
+		break;
+	case MT03:
+		m_tInfo.fCX = 20.f;
+		m_tInfo.fCY = 20.f;
+		m_fSpeed = 1.0f;
+		m_AttSpeed = 10;
+		break;
+	case MT04:
+		m_tInfo.fCX = 160;
+		m_tInfo.fCY = 160;
+		m_fSpeed = 1.0f;
+		m_AttSpeed = 10;
+		break;
+	default:
+		break;
+	}
+	
 
 
 }
@@ -55,6 +83,10 @@ int CMonster::Update()
 			CreateBullet(90);
 			++m_iMovArrIndex;
 		}
+	}
+	else
+	{
+		Dead();
 	}
 	
 

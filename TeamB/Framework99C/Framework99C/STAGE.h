@@ -24,7 +24,6 @@ private:
 	int m_PlusTick;
 	list<CGameObject*>* Monster_list;
 
-	vector<vector<CMMP>> m_PatternVector;
 
 
 };
